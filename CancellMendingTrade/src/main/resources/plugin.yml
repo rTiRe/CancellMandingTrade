@@ -1,4 +1,5 @@
-name: CancellMendingTrade
+name: CancelMendingTrade
 version: '${project.version}'
-main: ru.rtire.cancellmendingtrade.CancellMendingTrade
+authors: [ rTiRe ]
+main: ru.rtire.cancelmendingtrade.CancelMendingTrade
 api-version: '1.20'
