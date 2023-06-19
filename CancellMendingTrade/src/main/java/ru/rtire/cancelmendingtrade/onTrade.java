@@ -51,15 +51,17 @@ public class onTrade implements Listener {
                     }
                 }
             }
-            ItemStack mending = new ItemStack(Material.ENCHANTED_BOOK);
-            EnchantmentStorageMeta meta = (EnchantmentStorageMeta) mending.getItemMeta();
-            assert meta != null;
-            meta.addStoredEnchant(Enchantment.MENDING, 1, false);
-            mending.setItemMeta(meta);
-            MerchantRecipe recipe = new MerchantRecipe(mending, plugin.getConfig().getInt("maximumPurchasesFromTheWanderingMerchant"));
-            recipe.addIngredient(new ItemStack(Material.EMERALD, random(plugin.getConfig().getInt("minPrice"), plugin.getConfig().getInt("maxPrice"))));
-            recipies.add(recipe);
-            trader.setRecipes(recipies);
+            if(Math.random() <= plugin.getConfig().getDouble("chance")) {
+                ItemStack mending = new ItemStack(Material.ENCHANTED_BOOK);
+                EnchantmentStorageMeta meta = (EnchantmentStorageMeta) mending.getItemMeta();
+                assert meta != null;
+                meta.addStoredEnchant(Enchantment.MENDING, 1, false);
+                mending.setItemMeta(meta);
+                MerchantRecipe recipe = new MerchantRecipe(mending, plugin.getConfig().getInt("maximumPurchasesFromTheWanderingMerchant"));
+                recipe.addIngredient(new ItemStack(Material.EMERALD, random(plugin.getConfig().getInt("minPrice"), plugin.getConfig().getInt("maxPrice"))));
+                recipies.add(recipe);
+                trader.setRecipes(recipies);
+            }
         }
     }
 
