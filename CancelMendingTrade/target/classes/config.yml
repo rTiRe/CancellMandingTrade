@@ -2,3 +2,4 @@ maximumPurchasesFromTheWanderingMerchant: 1
 minPrice: 12
 maxPrice: 32
 chance: 0.7
+cancelDiamonds: true
