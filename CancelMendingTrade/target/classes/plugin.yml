@@ -1,0 +1,5 @@
+name: CancelMendingTrade
+version: '1.0'
+authors: [ rTiRe ]
+main: ru.rtire.cancelmendingtrade.CancelMendingTrade
+api-version: '1.20'
