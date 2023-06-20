@@ -13,7 +13,7 @@ public final class CancelMendingTrade extends JavaPlugin {
     public void onEnable() {
         instance = this;
         Bukkit.getPluginManager().registerEvents(new onTrade(), this);
-        System.out.println("from TiRe");
+        getLogger().info("from TiRe");
 
         File config = new File(getDataFolder() + File.separator + "src/main/resources/config.yml");
         if(!config.exists()) {

@@ -43,6 +43,8 @@ public class onTrade implements Listener {
                 || rType.equals(Material.DIAMOND_HELMET) || rType.equals(Material.DIAMOND_CHESTPLATE) || rType.equals(Material.DIAMOND_LEGGINGS) || rType.equals(Material.DIAMOND_BOOTS)
                 || rType.equals(Material.DIAMOND_AXE) || rType.equals(Material.DIAMOND_HOE) || rType.equals(Material.DIAMOND_PICKAXE) || rType.equals(Material.DIAMOND_SHOVEL) || rType.equals(Material.DIAMOND_SWORD) || rType.equals(Material.DIAMOND_HORSE_ARMOR))) {
                     r.setMaxUses(0);
+                } else {
+                    r.setMaxUses(3);
                 }
             }
         }
