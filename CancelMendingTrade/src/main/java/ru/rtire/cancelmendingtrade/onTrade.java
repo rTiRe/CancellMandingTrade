@@ -39,12 +39,15 @@ public class onTrade implements Listener {
                         }
                     }
                 }
-                if(plugin.getConfig().getBoolean("cancelDiamonds") && (rType.equals(Material.DIAMOND) || rType.equals(Material.DIAMOND_BLOCK) || rType.equals(Material.DIAMOND_ORE) || rType.equals(Material.DEEPSLATE_DIAMOND_ORE)
+                if(rType.equals(Material.DIAMOND) || rType.equals(Material.DIAMOND_BLOCK) || rType.equals(Material.DIAMOND_ORE) || rType.equals(Material.DEEPSLATE_DIAMOND_ORE)
                 || rType.equals(Material.DIAMOND_HELMET) || rType.equals(Material.DIAMOND_CHESTPLATE) || rType.equals(Material.DIAMOND_LEGGINGS) || rType.equals(Material.DIAMOND_BOOTS)
-                || rType.equals(Material.DIAMOND_AXE) || rType.equals(Material.DIAMOND_HOE) || rType.equals(Material.DIAMOND_PICKAXE) || rType.equals(Material.DIAMOND_SHOVEL) || rType.equals(Material.DIAMOND_SWORD) || rType.equals(Material.DIAMOND_HORSE_ARMOR))) {
-                    r.setMaxUses(0);
-                } else {
-                    r.setMaxUses(3);
+                || rType.equals(Material.DIAMOND_AXE) || rType.equals(Material.DIAMOND_HOE) || rType.equals(Material.DIAMOND_PICKAXE) || rType.equals(Material.DIAMOND_SHOVEL) || rType.equals(Material.DIAMOND_SWORD) || rType.equals(Material.DIAMOND_HORSE_ARMOR)) {
+                    if(plugin.getConfig().getBoolean("cancelDiamonds")) {
+                        r.setMaxUses(0);
+                    }
+                    else {
+                        r.setMaxUses(3);
+                    }
                 }
             }
         }
